@@ -1,0 +1,79 @@
+/*reset css*/
+
+
+
+html{
+    font-size: 62.5%;
+    
+} 
+body{
+   font: 1.6rem sans-serif;
+   margin: 0;
+
+}
+h1,h2,h3,ul,p{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   font-weight: normal;
+}
+*{
+   box-sizing: border-box; 
+}
+
+/* theme*/
+/* palette couleur variable css: généralements sont déclarées dans une pseoudo-classe; */ 
+:root{ /* on met ce root comme une repertoire pour ne pas répéter les couleurs just on prend la var comme raccourcis*/
+   --color-default:#222;
+   --color-warning:#c0392b;
+   --color-font-header:#fff;
+   
+}
+header h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    line-height: 6.5rem;
+    background-color: var( --color-warning);
+    color: var(--color-font-header);
+    text-align: center;
+    margin-bottom: 6.5rem;
+    width: 100%;
+}
+header h1 .material-icons{
+    font-size: 3rem;
+    vertical-align: -.3rem;
+}
+
+main, footer{
+    max-width: 100rem;
+    margin: 7rem auto 0;
+   
+}
+footer{
+    margin-top: 1rem;
+}
+footer p, footer details summary{
+    padding: .5rem;
+    text-align: center;
+}
+
+/*change for display grid*/
+
+main ul{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(4,1fr);    /* 4 colonnes dans (une fraction = ( ligne)) */
+    grid-gap: 1.0rem;
+    border: solid .1rem #ccc;
+}
+main ul li img{
+    display: block;
+    width: 100%;
+}
+main ul li:last-child{
+    grid-column:  1 / 5;
+    grid-row: 1;/* on peut changer d'ordre cette était en bas mnt elle est devenue en haut */
+
+}

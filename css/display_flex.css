@@ -1,0 +1,99 @@
+/* reset css */
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem 'Open Sans', sans-serif;
+    margin: 0;
+}
+h1,h2,ul,p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: normal;
+}
+*{
+    box-sizing: border-box;
+}
+/* theme */
+:root{
+    --color-default: #222;
+    --color-warning: #c0392b;
+    --color-font-header: #fff;
+}
+header h1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    line-height: 6.5rem;
+    background-color: var(--color-warning);
+    color: var(--color-font-header);
+    text-align: center;
+    margin-bottom: 6.5rem;
+    width: 100%;
+
+}
+header h1 .material-icons{
+    font-size: 3rem;
+    vertical-align: -0.3rem;
+}
+
+main, footer{
+    max-width: 100.0rem; /* width, min-width */
+    margin: 7rem auto 0;
+    
+}
+footer{
+    margin-top: 1rem;
+}
+footer p, footer details summary{
+    padding: .5rem;
+    text-align: center;
+}
+/* display for flex */
+
+main ul li img{
+    display: block;
+    width: 100%;
+}
+main ul{
+    display: flex;
+    flex-direction: row; /* column */
+    flex-wrap: wrap; /*pour evenir à la ligne*/
+    padding: 1rem 0 0 1rem;
+}
+
+main ul li{
+    flex-shrink: 0; /* pour permettre aux éléments de retrecir */
+    flex-grow: 1; /* pour permettre aux élément de grossir */
+    flex-basis: calc(100% / 4 - 1rem);
+    margin: 0 1rem 1rem 0;
+}
+
+/* responsive design */
+@media screen and (max-width: 100rem){
+    main{
+        margin: 0;
+    }
+    header h1{
+        position: static;
+        z-index: 1;
+        margin-bottom:.1rem;
+        text-align: center;
+        width: auto;
+    }
+    main ul{
+        flex-direction: column;
+    }
+    main ul li{
+        overflow: hidden;
+       
+    }
+}
+@media screen and (orientation: landscape){
+        main ul{
+            flex-direction: row;
+        }
+}
+
