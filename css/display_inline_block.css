@@ -47,24 +47,26 @@ header h1 .material-icons{
 }
 main, footer{
     max-width: 100rem;
-    margin: 7rem auto 0;
-   
+    margin: 7rem auto 0; 
 }
+
 footer{
     margin-top: 1rem;
 }
+
 footer p, footer details summary{
     padding: .5rem;
     text-align: center;
 }
+
 /* grille avec autre methode*/
 main li img{
     display: block;
     width: 100%;
-
 }
+
 main ul{
-    font-size: 0;
+    font-size: 0; /* pour supprimer l'interlignages entre les li on a deux methodes (une sur html avec les commentaires et une dans le css) donc la deuxiemme methode est: il faut mettre le parent de li en Font-size: 0; */
     padding: 1rem 0 0 1rem;
     border: solid #ccc .1rem;
 }

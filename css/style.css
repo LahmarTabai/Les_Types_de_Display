@@ -60,24 +60,24 @@ footer p, footer details summary{
 main > ul li img{
      display: block;
      width: 100%;
-     /**/
+     /* si on fait ca l'espacement s'enva */
 
 }
+
+/* Mise en forme des grilles */
+
 main > ul{
     margin-top: 5rem;
     background-color: #fafafa;
-    overflow: hidden; /* un masque qui lui permet de ne pas flotter*/
+    overflow: hidden;    /* un masque qui lui permet de ne pas flotter*/
     padding: 1rem 0 0 1rem;
     box-shadow: 0 0 1rem var(--color-default);
-
-
-
 }
+
 main ul li{
     width: calc(100% / 4 - 1rem);
     float: left;
     margin: 0 1rem 1rem 0;
-
 }
 
 main ul li:last-child{
